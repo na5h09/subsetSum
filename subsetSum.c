@@ -36,7 +36,15 @@ int main(void) {
     uint k = 4;
     uint v = 15;
 
+    /*//test 3 should not work
+    uint x[] = {8,7,5,2,1,4,9,6};
+    uint n = 8;
+    uint k = 3;
+    uint v = 30;*/
+
     if(sumsTo(x, n, k, v) == true) {
         printf("works!!\n");
+    } else {
+      printf("didn't work\n");
     }
 }
