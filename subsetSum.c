@@ -3,7 +3,6 @@
 #include <stdlib.h>
 
 bool sumsTo(uint x[], uint n, uint k, uint v) {
-    // printf("x[0], n, k, v: %d, %d, %d, %d\n", x[0], n, k, v);
     if (v == 0 && k == 0) {
         return true;
     }   // used up all numbers to reach sum 0
@@ -25,8 +24,19 @@ bool sumsTo(uint x[], uint n, uint k, uint v) {
 }
 
 int main(void) {
+    /*//test 1 should work
     uint x[] = {1,8,6,4,3};
-    if(sumsTo == true) {
-        printf("works!!");
+    uint n = 5;
+    uint k = 3;
+    uint v = 13;*/
+
+    //test 2 should work
+    uint x[] = {1,2,5,7,6,1,5,4,5,2,4,5,7};
+    uint n = 13;
+    uint k = 4;
+    uint v = 15;
+
+    if(sumsTo(x, n, k, v) == true) {
+        printf("works!!\n");
     }
 }
