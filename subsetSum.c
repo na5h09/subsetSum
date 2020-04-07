@@ -5,22 +5,22 @@
 bool sumsTo(uint x[], uint n, uint k, uint v) {
     if (v == 0 && k == 0) {
         return true;
-    }   // used up all numbers to reach sum 0
+    }   // check to see if case given was possible, if both the number terms needed and total sum left is 0
     if (v!=0 && k == 0) {
         return false;
-    }   // used up all numbers without reaching sum 0
+    }   // if all numbers needed were checked but the total sum is greater that 0
     if (n == 0) {
-        return false;
-    }   // used up all numbers without reaching sum 0
-    int res1 = 0;
+        return false;0
+    }   // if all numbers in general were checked, if the amount of numbers in set as a whole weren't enough
+    int res1 = 0; //recursion to go throw whole set to check for the right numbers
     if (v >= x[0]) {
         res1 = sumsTo(x + 1, n - 1, k -1, v - x[0]);
     }   // include the first number of the array in the sum
     int res2 = sumsTo(x + 1, n - 1, k, v);  // exclude the first number in the sum
-    if (res1 + res2 > 0) {
+    if (res1 + res2 > 0) { //if either or both results turn true, that return true as a final
         return true;
     }
-    return false;
+    return false; //return false if everything before doesn't work
 }
 
 int main(void) {
